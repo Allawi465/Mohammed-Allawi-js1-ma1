@@ -46,3 +46,19 @@ for(let i = 0; i < paragraphs.length; i++ ) {
 }
 
 // Question 6
+
+resultsContainer = document.querySelector(".results");
+
+resultsContainer.innerHTML = "<p>New paragraph</p>"; 
+
+resultsContainer.style.backgroundColor = "yellow";
+
+// Question 7
+
+function list(getName) {
+    for(let i = 0; i < getName.lenght; i++) {
+        console.log(getTheName[i].name);
+    }
+}
+
+list(cats);
