@@ -4,24 +4,16 @@ const cats = [
     {
         name: "Blob",
         age: 10,
-        complain: function() {
-            console.log("Meow!");
-        }
     },
     {
         name: "Harold",
-        complain: function() {
-            console.log("Meow!");
-        }
     },
     {
         name: "Blurt",
         age: 21,
-        complain: function() {
-            console.log("Meow!");
-        }
     }
 ];
+
 
 
 // Question 2
@@ -49,16 +41,19 @@ for(let i = 0; i < paragraphs.length; i++ ) {
 
 resultsContainer = document.querySelector(".results");
 
-resultsContainer.innerHTML = "<p>New paragraph</p>"; 
+resultsContainer.innerHTML = `<p>New paragraph</p>`; 
 
 resultsContainer.style.backgroundColor = "yellow";
 
 // Question 7
 
-function list(getName) {
-    for(let i = 0; i < getName.lenght; i++) {
-        console.log(getTheName[i].name);
+function list() {
+    for (let i = 0; i < cats.lenght; i++) {
+        let catsNames = cats[i].name;
+        console.log(catsNames);
     }
 }
 
-list(cats);
+list();
+
+// Question 8
