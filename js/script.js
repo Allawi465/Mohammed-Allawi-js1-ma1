@@ -46,14 +46,31 @@ resultsContainer.innerHTML = `<p>New paragraph</p>`;
 resultsContainer.style.backgroundColor = "yellow";
 
 // Question 7
-
+/* 
 function list() {
-    for (let i = 0; i < cats.lenght; i++) {
-        let catsNames = cats[i].name;
-        console.log(catsNames);
+    for (let i = 0; i < list.lenght; i++) {
+        console.log(list[i].name);
     }
 }
 
-list();
+list(); */
 
 // Question 8
+
+catContainer = document.querySelector(".cat-container");
+
+function createCats(cats) {
+    let html = ""; 
+    let catAge = "Age unknown"
+    for (let i = 0; i < cats.length; i++) {
+        html += `<div>
+        <h5>Name: ${cats[i].name}</h5>
+        <p>Age: ${cats[i].age}</p>
+        </div>`;
+    }
+
+    return html;
+}
+
+const newhtml = createCats(cats);
+catContainer.innerHTML = newhtml;
