@@ -1,5 +1,3 @@
-// Question 1
-
 const cats = [
     {
         name: "Blob",
@@ -14,7 +12,13 @@ const cats = [
     }
 ];
 
+// Question 1
 
+const cat = {
+    complain: function () {
+      console.log ("Meow!"); 
+    }
+} 
 
 // Question 2
 
@@ -31,7 +35,7 @@ heading.className = "subheading";
 
 // Question 5
 
-paragraphs = document.querySelectorAll("p");
+const paragraphs = document.querySelectorAll("p");
 
 for(let i = 0; i < paragraphs.length; i++ ) {
     paragraphs[i].style.color = "red";
@@ -39,34 +43,38 @@ for(let i = 0; i < paragraphs.length; i++ ) {
 
 // Question 6
 
-resultsContainer = document.querySelector(".results");
+const resultsContainer = document.querySelector(".results");
 
 resultsContainer.innerHTML = `<p>New paragraph</p>`; 
 
 resultsContainer.style.backgroundColor = "yellow";
 
 // Question 7
-/* 
-function list() {
-    for (let i = 0; i < list.lenght; i++) {
-        console.log(list[i].name);
+
+function getNames(list) {
+    for (let i = 0; i < list.length; i++) {
+        console.log (list[i].name);
     }
 }
 
-list(); */
+getNames(cats); 
 
 // Question 8
 
-catContainer = document.querySelector(".cat-container");
+const catContainer = document.querySelector(".cat-container");
 
 function createCats(cats) {
     let html = ""; 
-    let catAge = "Age unknown"
+    
     for (let i = 0; i < cats.length; i++) {
+        let ageForCats = "Age unknown"
+        if (cats[i].age) {
+            ageForCats = cats[i].age;
+        }
         html += `<div>
-        <h5>Name: ${cats[i].name}</h5>
-        <p>Age: ${cats[i].age}</p>
-        </div>`;
+                 <h5>Name: ${cats[i].name}</h5>
+                 <p>Age: ${ageForCats}</p>
+                </div>`;
     }
 
     return html;
